@@ -471,7 +471,7 @@ header .header-con__right .img_down {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-image: url("../../../assets/icons/CheckCircle.png");
+  background-image: url("../assets/icons/CheckCircle.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
