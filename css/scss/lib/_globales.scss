@@ -1,0 +1,44 @@
+// Colores principales del diseño
+$color-claro: #f8f8f8;
+$color-oscuro: #2d3132;
+$color-alternativo: #e1f000;
+
+//Fuentes
+$Fuente1: 'Gelliz', sans-serif;
+$Fuente2: 'Saira', sans-serif;
+
+//Tamaños de fuente
+$texto-xl: 64px;
+$texto-l: 48px;
+$texto-m: 24px;
+$texto-s: 18px;
+
+//mixins
+@mixin background-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin  button{
+    width: 160px;
+    height: 60px;
+    background-color: $color-alternativo;
+    font-family: $Fuente1;
+    font-weight: 600;
+    font-size: $texto-s;
+    border-radius: 10px;
+    border: 1px solid #c4c4c4;
+    color: $color-oscuro;
+}
+
+@mixin card {
+    width: 33%;
+    max-width: 375px;
+    height: auto;
+    font-family: $Fuente1;
+    line-height: 28.7px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+}
