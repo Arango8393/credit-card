@@ -5,8 +5,9 @@
     text-decoration: none;
 }
 
-ul {
+ul, a{
     list-style: none;
+    text-decoration: none;
   }
   
 
@@ -17,20 +18,19 @@ html {
   }
 
 nav { 
-  width: 100%;
+  @include max-container;
   height: 70px;
   background: rgb(40,52,51);
   background: linear-gradient(90deg, rgba(40,52,51,1) 70%, rgba(27,40,45,1) 80%);
   padding-top: 15px;
     
     .nav-cont{
+      @include container;
       display: flex;
-      min-width: 375px;
       align-items: center;
       justify-content: space-between;
       color: $color-claro;
       padding: 0 50px;
-      margin: 0 auto;
     }
     
     
@@ -53,7 +53,6 @@ nav {
     nav { 
       
       .nav-cont{
-        max-width: 1600px;
         padding: 0 100px;
       }
       h2 {
@@ -65,16 +64,14 @@ nav {
     }
   }
   header {
-    width: 100%;
-    height: auto;
+    @include max-container;
     background-color: rgba(18, 31, 36, 1);
     opacity: 0.9;
     .header-cont {
+      @include container;
       display: flex;
       flex-direction: column;
       padding: 10px 50px;
-      min-width: 375px;
-      margin:  0 auto;
     }
     .header-cont__left {
       width: 100%;
@@ -82,6 +79,7 @@ nav {
       h1 {
         color: $color-claro;
         font-size: $texto-l;
+        margin-bottom: 20px;
       }
       h3 {
         color: #c1c1c1;
@@ -92,7 +90,6 @@ nav {
       .button1 {
         @include button;
         background-color: transparent;
-        color: $color-claro;
         display: inherit;
         margin: 0 auto;
         margin-top: 15px;
@@ -100,19 +97,23 @@ nav {
           background-color: $color-alternativo;
   
         }
-        
+        a{
+          color: $color-claro;
+          margin: 0 10px;
+        }
       
       }
       
     }
     .header-con__right {
       padding-top: 25px;
-      width: 70%;
+      height: 500px;
       margin: 0 auto;
       
   
         .img_up{
           width: 100%;
+          max-width: 500px;
           height: auto;
           position: relative;
           top: 10px;
@@ -120,6 +121,7 @@ nav {
         }
         .img_down{
           width: 100%;
+          max-width: 500px;
           height: auto;
           position: relative;
           bottom: 70px;
@@ -136,7 +138,6 @@ nav {
         align-items: center;
         justify-content: space-between;
         padding: 0 100px;
-        max-width: 1600px;
         position: relative;
       }
       .header-cont__left {
@@ -159,6 +160,7 @@ nav {
       .header-con__right {
         text-align: end;
         width: 50%;
+        height: 700px;
           &-images{
             max-width: 500px;
           }    
@@ -181,25 +183,12 @@ nav {
       }
     }
   }
-  @media screen and (min-width: 1440px){
-    header {
-      .header-cont {
-        
-        .onda{
-            right: 55px;
-            top: 155px;
-          }
-      }
-    }
-  }
 
   .caract-cont {
-    width: 100%;
-    height: auto;
+    @include max-container;
     background-color: #e5e5e5;
     &__all {
-      min-width: 375px;
-      margin: 0 auto;
+      @include container;
       padding: 50px;
     }
   
@@ -234,6 +223,10 @@ nav {
       .caract-card{
         @include card;
         width: 325px;
+        background-color: $color-claro;
+        box-shadow:-6px -6px 20px rgba(255, 255, 255,1), /*sombra*/
+                6px 6px 20px rgba(0, 0, 0, .1);
+        margin: 20px 0;
         img{
           display: block;
           margin: 0 auto;
@@ -252,8 +245,6 @@ nav {
           text-align: center;
         }
         &__middle {
-          margin-left: 50px;
-          margin-right: 50px;
           border-radius: 10px;
           background-color: rgba(255, 255, 255, 1);
           padding-left: 20px;
@@ -267,8 +258,6 @@ nav {
   @media screen and (min-width: 1024px){
     .caract-cont {
       &__all {
-        max-width: 1600px;
-        margin: 0 auto;
         padding: 100px;
       }
     
@@ -309,6 +298,8 @@ nav {
             font-size: $texto-s;
             font-weight: 400;
             margin-top: 30px;
+            margin-left: 10px;
+            margin-right: 10px;
           }
           &__middle {
             margin-left: 50px;
@@ -325,22 +316,20 @@ nav {
     }
   }
   .rules-container__all{
-    width: 100%;
-    height: auto;
+    @include max-container;
     background-color: $color-claro;
     .rules-container{
-      min-width: 375px;
-      margin: 0 auto;
-      padding: 80px 50px;
+      @include container;
+      padding: 50px 50px;
       display: flex;
       flex-direction: column;
       &__up{
-        height: 440px;
+        height: auto;
         &-one{
-        max-width: 400px;  
+        max-width: 375px;  
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 33% 33% 33%;
+        grid-template-rows: 50% 50%;
         margin: 0 auto;
         }
         .img-send{
@@ -362,22 +351,23 @@ nav {
           color: $color-oscuro;
           font-family: $Fuente1;
           width: 100%;
-          margin-bottom: 30px;
+          margin-bottom: 40px;
           h4{
             font-size: $texto-s;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
           }
           p{
             font-size: $texto-s - 3px;
+            margin-bottom: 20px;
           }
           button{
             @include button;
             display: block;
-            width: 120px;
-            height: auto;
-            padding: 10px;
             margin: 0 auto;
-            margin-top: 15px;
+            a{
+              color: $color-oscuro;
+              margin: 0 10px;
+            }
           }
 
         } 
@@ -415,7 +405,7 @@ nav {
 
         .container-profit{
           width: 100%;
-          max-width: 400px;
+          max-width: 375px;
           display: grid;
           grid-template-columns: 50% 50%;
           grid-template-rows: repeat(4,25%);
@@ -443,12 +433,22 @@ nav {
     @media screen and (min-width: 1024px) {
       .rules-container__all{
         .rules-container{
-          max-width: 1600px;
           flex-direction: row;
           flex-wrap: wrap;
           padding: 50px 100px;
           &__up{
             display: inherit;
+            &-one{
+              position: relative;
+              grid-template-columns: 50% 50%;
+              grid-template-rows: 100%;
+              margin-left: 0;
+              .img-mohamed{
+                position: absolute;
+                top: 140px;
+                left: 140px;
+              }
+            }
             article {
               width: 50%;
               color: $color-oscuro;
@@ -493,6 +493,7 @@ nav {
             }
             .container-profit{
               width: 50%;
+              margin-right: 0
             }
           }
           }  
@@ -500,18 +501,19 @@ nav {
         }
       }
     .partners-container{
+      @include max-container;
       background-color: #ffffff;
       
       &__max{
-        min-width: 375px;
-        padding: 80px 50px;
+        @include container;
+        padding: 50px 50px;
         display: flex;
         flex-direction: column;
         div{
           max-width: 400px;
           display: grid;
-          grid-template-columns: repeat(4, 25%);
-          grid-template-rows: repeat(2, 50%);
+          grid-template-columns: repeat(3, 33%);
+          grid-template-rows: repeat(3, 33%);
           img{
             width: 100%;
           }
@@ -525,6 +527,7 @@ nav {
           }
           p{
             font-size: $texto-s - 3px;
+            margin-top: 1.5rem;
           }
           button{
             @include button;
@@ -533,6 +536,10 @@ nav {
             display: block;
             margin: 0 auto;
             margin-top: 20px;
+            a{
+              color: $color-oscuro;
+              margin: 0 15px;
+            }
           }
         }
       }
@@ -541,7 +548,6 @@ nav {
       .partners-container{
        
         &__max{
-          max-width: 1600px;
           padding: 50px 100px;
           justify-content: space-between;
           flex-direction: row;
@@ -565,38 +571,42 @@ nav {
       }
     }
     .cta-container{
+      @include max-container;
       background: rgb(49,71,63);
       background: linear-gradient(90deg, rgba(49,71,63,1) 0%, rgba(18,31,36,1) 50%);
       
       &-max{
-        min-width: 375px;
+        @include container;
         display: flex;
         flex-direction: column;
-        padding: 80px 50px;
+        padding: 50px 50px;
         article{
           color: $color-claro;
           h4{
             font-size: $texto-m;
+            margin-bottom: 20px;
           }
           p{
             font-size: $texto-s - 3px;
+            margin-bottom: 40px
           }
         }
         button{
           @include button;
-          width: 120px;
           height: 40px;
           display: block;
           margin: 0 auto;
-          margin-top: 20px;
-      
+          align-self: center;
+          a{
+            color: $color-oscuro;
+            margin: 0 10px;
+          }
         }
       }
     }
     @media screen and (min-width: 1024px){
       .cta-container{
         &-max{
-          max-width: 1600px;
           flex-direction: row;
           justify-content: space-between;
           padding: 50px 100px;
@@ -617,10 +627,11 @@ nav {
       } 
     }
     footer{
+      @include max-container;
       background: rgb(22,34,39);
       background: linear-gradient(90deg, rgba(22,34,39,1) 0%, rgba(45,64,60,1) 50%);
       .footer__container{
-        min-width: 375px;
+        @include container;
         display: flex;
         flex-direction: column;
         padding: 50px;
@@ -661,6 +672,9 @@ nav {
             li{
               padding: 5px;
               color: $color-claro;
+              a{
+                color: $color-claro;
+              }
             }
           }
         }
@@ -671,18 +685,20 @@ nav {
         background: rgb(22,34,39);
         background: linear-gradient(90deg, rgba(22,34,39,1) 0%, rgba(45,64,60,1) 50%);
         .footer__container{
-          max-width: 1600px;
           flex-direction: row;
           padding: 50px 100px;
           &-logo{
             width: 50%;
+            grid-template-columns: 20% 50%;
             span {
               width: 75px;
               height: 150px;
             }
           }
           p{
+            text-align: start;
             font-size: $texto-s;
+            padding-left: 0;
           }
           &-list{
             width: 100%;

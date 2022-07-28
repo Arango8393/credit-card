@@ -14,6 +14,18 @@ $texto-m: 24px;
 $texto-s: 18px;
 
 //mixins
+@mixin max-container {
+    width: 100%;
+    height: auto;
+}
+
+@mixin container {
+    max-width: 1600px;
+    min-width: 375px;
+    margin: 0 auto;
+}
+
+
 @mixin background-img {
     background-size: cover;
     background-position: center;
@@ -21,7 +33,8 @@ $texto-s: 18px;
 }
 
 @mixin  button{
-    width: 160px;
+    width: auto;
+    padding: 0 10px;
     height: 60px;
     background-color: $color-alternativo;
     font-family: $Fuente1;
@@ -40,5 +53,6 @@ $texto-s: 18px;
     line-height: 28.7px;
     padding-top: 25px;
     padding-bottom: 25px;
+    border-radius: 10px;
 
 }
