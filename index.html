@@ -10,15 +10,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Saira:wght@500&display=swap" rel="stylesheet">
     <link href = "./assets/fonts/gellix/stylesheet.css" rel = "stylesheet" type = "text/css" />
     <link rel="stylesheet" href="./css/styles.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
-    <nav>
-        <div class="nav-cont">
-            <div>
+    <nav x-data="{ open: false }">
+        <div  class="nav-cont">
+            <div x-bind:class="{ 'logo': open }">
                 <span></span> <h2>Pay</h2>
             </div>
-            <div>
-                <img src="./assets/icons/Vector.png" alt="" width="20px" height="20px">
+            <div >
+                <img @click="open = !open" src="./assets/icons/Vector.png" alt="" width="20px" height="20px">
+                <ul x-show="open" class="modal" >
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Accesibility</a></li>
+                    <li><a href="#">Customer service</a></li>
+                </ul>
             </div>
         </div>    
     </nav>
@@ -31,8 +38,8 @@
                 <h3>
                     Malesuada pretium scelerisque dcmo at diam fusce montes socios ultricies etiam vivamus netus nostra.
                 </h3>
-                <button class="button1 button1_start"><a href="#">Get Started</a></button>
-                <button class="button1 button1_more"><a href="#">Learn More</a></button>
+                <a class="button1" href="#">Get Started</a>
+                <a class="button1" href="#">Learn More</a>
             </div>
             <div class="header-con__right">
                     <img class="img_up" src="./assets/images/black.png" alt="" >
@@ -99,9 +106,8 @@
                     <p>
                         Enable faster purchasing by giving every employee access to the funds they need in a safe and secure manner.
                     </p>
-                    <button>
-                        <a href="#">Get Started</a>
-                    </button>
+                    <a class="button1" href="#">Get Started</a>
+                    
                 </article>        
             </div>
             <div class="rules-container__down">
@@ -144,9 +150,7 @@
                 <p>
                     Enable faster purchasing by giving every employee access to the funds they need in a safe and secure manner.
                 </p>
-                <button>
-                    <a href="">Learn More</a> 
-                </button>
+                <a class="button1"href="#">Learn More</a> 
             </article>
         </div>
     </section>
@@ -160,9 +164,7 @@
                         Everything you need to accept card payments and grow your business anywhere on the planet.
                     </p>
                 </article>
-                <button>
-                    <a href="#">Get Started</a>
-                </button>
+                <a class="button1" href="#">Get Started</a>
         </div>
     </section>
     <footer>

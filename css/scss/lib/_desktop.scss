@@ -31,7 +31,12 @@ nav {
       justify-content: space-between;
       color: $color-claro;
       padding: 0 50px;
+      .logo {
+        display: none;
+      }
     }
+
+    
     
     
     span {
@@ -47,6 +52,27 @@ nav {
       font-size: $texto-m + 8px;
       display: inline-block;
       font-family: $Fuente1;
+    }
+
+    .modal {
+      padding: 50px 0;
+      position: relative;
+      z-index: 30;
+      width: 80vw;
+      height: 80vh;
+      background-color: $color-oscuro;
+      opacity: 0.8;
+      text-align: center; 
+      li{
+        font-size: $texto-m;
+        margin-bottom: 15px;
+        a{
+          color: $color-claro;
+          
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
     }
   }
   @media screen and (min-width: 1024px){
@@ -75,6 +101,8 @@ nav {
     }
     .header-cont__left {
       width: 100%;
+      display: flex;
+      flex-direction: column;
   
       h1 {
         color: $color-claro;
@@ -90,11 +118,12 @@ nav {
       .button1 {
         @include button;
         background-color: transparent;
-        display: inherit;
+        color: $color-claro;
         margin: 0 auto;
         margin-top: 15px;
         &:hover{
           background-color: $color-alternativo;
+          color: $color-oscuro;
   
         }
         a{
@@ -142,6 +171,7 @@ nav {
       }
       .header-cont__left {
         width: 50%;
+        display: block;
     
         h1 {
           font-size: $texto-xl;
@@ -151,6 +181,9 @@ nav {
           margin-bottom: 40px;
         }
         .button1 {
+          @include button;
+          background-color: transparent;
+          color: $color-claro;
           margin-left: 0;
           margin-right: 20px;
           display: inline;
@@ -349,25 +382,24 @@ nav {
         }
         article {
           color: $color-oscuro;
-          font-family: $Fuente1;
           width: 100%;
           margin-bottom: 40px;
+          font-family: $Fuente1;
+          text-align: center;
           h4{
             font-size: $texto-s;
             margin-bottom: 20px;
+            text-align: start;
           }
           p{
             font-size: $texto-s - 3px;
             margin-bottom: 20px;
+            text-align: start;
           }
-          button{
+          .button1{
             @include button;
-            display: block;
+            display: inline-block;
             margin: 0 auto;
-            a{
-              color: $color-oscuro;
-              margin: 0 10px;
-            }
           }
 
         } 
@@ -454,19 +486,13 @@ nav {
               color: $color-oscuro;
               font-family: $Fuente1;
               margin-bottom: 30px;
+              text-align: start;
               h4{
                 font-size: $texto-l;
                 margin-bottom: 10px;
               }
               p{
                 font-size: $texto-s;
-              }
-              button{
-                @include button;
-                margin-top: 30px;
-                display: block;
-                margin-left: 0;
-                
               }
           }
           
@@ -476,6 +502,7 @@ nav {
             display: inherit;
             article{
               width: 50%;
+              text-align: start;
               h4{
                 font-size: $texto-l;
               }
@@ -520,26 +547,22 @@ nav {
         }
         article{
           color:$color-oscuro;
-          text-align: start;
+          text-align: center;
           font-family: $Fuente1;
           h4{
             font-size: $texto-m;
+            text-align: start;
           }
           p{
             font-size: $texto-s - 3px;
             margin-top: 1.5rem;
+            text-align: start;
           }
-          button{
+          .button1{
             @include button;
-            width: 120px;
-            height: 40px;
-            display: block;
+            display: inline-block;
             margin: 0 auto;
             margin-top: 20px;
-            a{
-              color: $color-oscuro;
-              margin: 0 15px;
-            }
           }
         }
       }
@@ -556,15 +579,12 @@ nav {
           }
           article{
             width: 50%;
+            text-align: start;
             h4{
               font-size: $texto-l;
             }
             p{
               font-size: $texto-s;
-            }
-            button{
-              @include button;
-              margin-left: 0;
             }
           }
         }
@@ -591,16 +611,11 @@ nav {
             margin-bottom: 40px
           }
         }
-        button{
+        .button1{
           @include button;
-          height: 40px;
           display: block;
           margin: 0 auto;
           align-self: center;
-          a{
-            color: $color-oscuro;
-            margin: 0 10px;
-          }
         }
       }
     }
@@ -619,8 +634,7 @@ nav {
               font-size: $texto-s;
             }
           }
-          button{
-            @include button;
+          .button1{
             margin-right: 0;
           }
         }

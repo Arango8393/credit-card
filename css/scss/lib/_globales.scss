@@ -34,14 +34,14 @@ $texto-s: 18px;
 
 @mixin  button{
     width: auto;
-    padding: 0 10px;
+    padding: 20px;
     height: 60px;
     background-color: $color-alternativo;
     font-family: $Fuente1;
     font-weight: 600;
     font-size: $texto-s;
     border-radius: 10px;
-    border: 1px solid #c4c4c4;
+    border: 2px solid #c4c4c4;
     color: $color-oscuro;
 }
 
