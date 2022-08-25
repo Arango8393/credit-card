@@ -8,11 +8,12 @@ $Fuente1: 'Gelliz', sans-serif;
 $Fuente2: 'Saira', sans-serif;
 
 //Tamaños de fuente
-$texto-xl: 64px;
-$texto-l: 48px;
-$texto-m: 24px;
-$texto-s: 18px;
-
+$texto-xl: 6.4rem;
+$texto-l: 4.8rem;
+$texto-mm: 3.6rem;
+$texto-m: 2.4rem;
+$texto-s: 1.8rem;
+$texto-xs: 1.5rem;
 //mixins
 @mixin max-container {
     width: 100%;
@@ -21,7 +22,7 @@ $texto-s: 18px;
 
 @mixin container {
     max-width: 1600px;
-    min-width: 375px;
+    min-width: 320px;
     margin: 0 auto;
 }
 
@@ -51,8 +52,7 @@ $texto-s: 18px;
     height: auto;
     font-family: $Fuente1;
     line-height: 28.7px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 25px;
     border-radius: 10px;
 
 }
