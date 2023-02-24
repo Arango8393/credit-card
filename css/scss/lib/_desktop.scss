@@ -163,6 +163,7 @@ nav {
           color: $color-claro;
           margin: 0 auto;
           margin-top: 15px;
+          margin-bottom: 15px;
           &:hover{
             background-color: $color-alternativo;
             color: $color-oscuro;
@@ -180,6 +181,7 @@ nav {
         
       }
       .header-con__right {
+        display: none;
         padding-top: 25px;
         height: 400px;
         margin: 0 auto;
@@ -204,7 +206,7 @@ nav {
         
       }
     }
-  
+    
   @media screen and (min-width: 1024px){
     header {
       .header-cont {
@@ -237,6 +239,7 @@ nav {
         
       }
       .header-con__right {
+        display: block;
         text-align: end;
         width: 50%;
         height: 700px;
@@ -406,6 +409,7 @@ nav {
       flex-direction: column;
       &__up{
         height: auto;
+        padding-top:  20px;
         &-one{
         max-width: 375px;  
         display: grid;
@@ -431,7 +435,7 @@ nav {
         article {
           color: $color-oscuro;
           width: 100%;
-          margin-bottom: 40px;
+          margin-bottom: 20px;
           font-family: $Fuente1;
           text-align: center;
           h4{
@@ -522,6 +526,7 @@ nav {
           padding: 50px 100px;
           &__up{
             display: inherit;
+            padding-top: 30px;
             &-one{
               position: relative;
               grid-template-columns: 50% 50%;
@@ -591,8 +596,8 @@ nav {
         div{
           max-width: 400px;
           display: grid;
-          grid-template-columns: repeat(2, 50%);
-          grid-template-rows: repeat(3, 33%);
+          grid-template-columns: repeat(1, 100%);
+          grid-template-rows: repeat(6, 16%);
           img{
             width: 100%;
           }
@@ -601,6 +606,7 @@ nav {
           color:$color-oscuro;
           text-align: center;
           font-family: $Fuente1;
+          padding-bottom: 20px;
           h4{
             font-size: $texto-m;
             text-align: start;
@@ -638,9 +644,10 @@ nav {
           padding: 50px 100px;
           justify-content: space-between;
           flex-direction: row;
+          align-items: center;
           div{
-            grid-template-columns: repeat(3, 33%);
-          grid-template-rows: repeat(2, 50%);
+            grid-template-columns: repeat(2, 50%);
+          grid-template-rows: repeat(3, 33%);
             width: 50%;
           }
           article{
@@ -695,9 +702,11 @@ nav {
             width: 50%;
             h4{
               font-size: $texto-l;
+              margin-bottom: 20px;
             }
             p{
               font-size: $texto-s;
+              margin-bottom: 0;
             }
           }
           .button1{

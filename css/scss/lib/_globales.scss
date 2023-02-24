@@ -36,7 +36,7 @@ $texto-xs: 1.5rem;
 @mixin  button{
     width: auto;
     padding: 20px;
-    height: 60px;
+    height: auto;
     background-color: $color-alternativo;
     font-family: $Fuente1;
     font-weight: 600;

@@ -185,7 +185,7 @@ header .header-cont__left h3 {
 header .header-cont__left .button1 {
   width: auto;
   padding: 20px;
-  height: 60px;
+  height: auto;
   background-color: #e1f000;
   font-family: "Gelliz", sans-serif;
   font-weight: 600;
@@ -197,6 +197,7 @@ header .header-cont__left .button1 {
   color: #f8f8f8;
   margin: 0 auto;
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 header .header-cont__left .button1:hover {
@@ -210,6 +211,7 @@ header .header-cont__left .button1 a {
 }
 
 header .header-con__right {
+  display: none;
   padding-top: 25px;
   height: 400px;
   margin: 0 auto;
@@ -264,7 +266,7 @@ header .header-con__right .img_down {
   header .header-cont__left .button1 {
     width: auto;
     padding: 20px;
-    height: 60px;
+    height: auto;
     background-color: #e1f000;
     font-family: "Gelliz", sans-serif;
     font-weight: 600;
@@ -279,6 +281,7 @@ header .header-con__right .img_down {
     display: inline;
   }
   header .header-con__right {
+    display: block;
     text-align: end;
     width: 50%;
     height: 700px;
@@ -487,6 +490,7 @@ header .header-con__right .img_down {
 
 .rules-container__all .rules-container__up {
   height: auto;
+  padding-top: 20px;
 }
 
 .rules-container__all .rules-container__up-one {
@@ -524,7 +528,7 @@ header .header-con__right .img_down {
 .rules-container__all .rules-container article {
   color: #2d3132;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-family: "Gelliz", sans-serif;
   text-align: center;
 }
@@ -544,7 +548,7 @@ header .header-con__right .img_down {
 .rules-container__all .rules-container article .button1 {
   width: auto;
   padding: 20px;
-  height: 60px;
+  height: auto;
   background-color: #e1f000;
   font-family: "Gelliz", sans-serif;
   font-weight: 600;
@@ -642,6 +646,7 @@ header .header-con__right .img_down {
   }
   .rules-container__all .rules-container__up {
     display: inherit;
+    padding-top: 30px;
   }
   .rules-container__all .rules-container__up-one {
     position: relative;
@@ -723,10 +728,10 @@ header .header-con__right .img_down {
   max-width: 400px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (50%)[2];
-      grid-template-columns: repeat(2, 50%);
-  -ms-grid-rows: (33%)[3];
-      grid-template-rows: repeat(3, 33%);
+  -ms-grid-columns: (100%)[1];
+      grid-template-columns: repeat(1, 100%);
+  -ms-grid-rows: (16%)[6];
+      grid-template-rows: repeat(6, 16%);
 }
 
 .partners-container__max div img {
@@ -737,6 +742,7 @@ header .header-con__right .img_down {
   color: #2d3132;
   text-align: center;
   font-family: "Gelliz", sans-serif;
+  padding-bottom: 20px;
 }
 
 .partners-container__max article h4 {
@@ -753,7 +759,7 @@ header .header-con__right .img_down {
 .partners-container__max article .button1 {
   width: auto;
   padding: 20px;
-  height: 60px;
+  height: auto;
   background-color: #e1f000;
   font-family: "Gelliz", sans-serif;
   font-weight: 600;
@@ -786,12 +792,15 @@ header .header-con__right .img_down {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .partners-container__max div {
-    -ms-grid-columns: (33%)[3];
-        grid-template-columns: repeat(3, 33%);
-    -ms-grid-rows: (50%)[2];
-        grid-template-rows: repeat(2, 50%);
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
+    -ms-grid-rows: (33%)[3];
+        grid-template-rows: repeat(3, 33%);
     width: 50%;
   }
   .partners-container__max article {
@@ -845,7 +854,7 @@ header .header-con__right .img_down {
 .cta-container-max .button1 {
   width: auto;
   padding: 20px;
-  height: 60px;
+  height: auto;
   background-color: #e1f000;
   font-family: "Gelliz", sans-serif;
   font-weight: 600;
@@ -876,9 +885,11 @@ header .header-con__right .img_down {
   }
   .cta-container-max article h4 {
     font-size: 4.8rem;
+    margin-bottom: 20px;
   }
   .cta-container-max article p {
     font-size: 1.8rem;
+    margin-bottom: 0;
   }
   .cta-container-max .button1 {
     margin-right: 0;
